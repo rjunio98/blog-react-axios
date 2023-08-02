@@ -1,45 +1,48 @@
-import { useState, useEffect } from "react"
-import axios from "axios"
-import { Link } from "react-router-dom"
+import blogFetch from "../axios/config";
 
-import blogFetch from "../axios/config"
+import { useState, useEffect } from "react";
 
-import "./Home.css"
+import { Link } from "react-router-dom";
+
+import "./Home.css";
 
 const Home = () => {
-  const [posts, setPosts] = useState([])
+  const [posts, setPosts] = useState([]);
 
-  const getPosts = async() => {
+  const getPosts = async () => {
     try {
-      const response = await blogFetch.get("/posts")
-      const data = response.data
+      const response = await blogFetch.get("/posts");
 
-      setPosts(data)
+      const data = response.data;
+
+      setPosts(data);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
   useEffect(() => {
-
-    getPosts()
-  }, [])
-
+    getPosts();
+  }, []);
 
   return (
     <div className="home">
       <h1>Últimos posts</h1>
-      {posts.lenght === 0 ? (<p>Carregando...</p>) : (
-        posts.map((post) => {
+      {posts.length === 0 ? (
+        <p>Carregando...</p>
+      ) : (
+        posts.map((post) => (
           <div className="post" key={post.id}>
             <h2>{post.title}</h2>
             <p>{post.body}</p>
-            <Link to={`/posts/${post.id}`} className="btn">Ler mais</Link>
+            <Link className="btn" to={`/posts/${post.id}`}>
+              Ler mais
+            </Link>
           </div>
-        })
+        ))
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
