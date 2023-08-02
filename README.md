@@ -1,8 +1,48 @@
-# React + Vite
+# Blog axios
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Funcionalide 
+[<img src="./design/blog.gif" alt="gif da busca">]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## Como usar
+
+```
+git clone https://github.com/rjunio98/blog-react-axios
+
+```
+
+```
+cd blog-react-azios
+```
+
+```
+npm install
+```
+
+```
+npm start
+```
+
+
+## Objetivo
+É um projeto baseado em react, consite em um blog onde tem a página Home que faz um get na API. Tem outra página novo post que pode criar um post E outra página gerenciar que vai ter a opção de excluir e editar o post escolhido.
+
+- React-icons
+- React-router-dom
+- React Hooks
+- Integração com API axios
+- HTML
+- FlexBox
+- Manipulação de objetos/array JS
+
+---
+
+## Tecnologias utilizadas
+
+- HTML
+- CSS
+- ReactJs
+- Integração com API
+- Git
